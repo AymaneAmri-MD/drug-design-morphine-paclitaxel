@@ -1,17 +1,17 @@
-# Drug design : morphine et paclitaxel
+# Drug design : morphine et atropine
 
-Pipeline reproductible de préparation de ligands, docking moléculaire et génération d'analogues, appliqué à deux molécules aux propriétés structurales contrastées.
+Pipeline reproductible de préparation de ligands, docking moléculaire et génération d'analogues, appliqué à deux alcaloïdes aux cibles bien caractérisées.
 
 | Ligand | Cible | PDB (à vérifier sur rcsb.org) |
 |---|---|---|
 | Morphine | Récepteur opioïde µ | 5C1M |
-| Paclitaxel | Tubuline β | 5SYF / 1JFF |
+| Atropine (L-hyoscyamine) | Récepteur muscarinique M2 | 3UON |
 
 ## Objectifs
 
 1. Préparer les ligands (SMILES, stéréochimie, conformères 3D) avec RDKit.
 2. Valider le protocole par **re-docking** du ligand co-cristallisé (RMSD < 2 Å).
-3. Docker morphine et paclitaxel avec AutoDock Vina.
+3. Docker morphine et atropine avec AutoDock Vina.
 4. Générer des analogues (VAE sur SMILES ou REINVENT) puis les filtrer par docking.
 
 ## Structure
@@ -23,7 +23,9 @@ src/         fonctions réutilisables
 results/     sorties (ignorées par git sauf exemples légers)
 ```
 
-## Installation
+## Utilisation
+
+Les notebooks sont conçus pour **Google Colab** (Fichier, puis Importer un notebook). Pour une installation locale :
 
 ```bash
 conda env create -f environment.yml
@@ -39,7 +41,9 @@ jupyter lab
 
 ## Limites
 
-Les scores de docking sont des approximations grossières de l'affinité. Le paclitaxel, grand et très flexible, est un cas difficile : les résultats sont à interpréter avec prudence. Versions et seeds sont fixées dans les notebooks.
+Les scores de docking sont des approximations grossières de l'affinité. Récepteurs rigides, ligands dockés sous forme neutre, atropine représentée par son énantiomère actif (L-hyoscyamine). Versions et seeds sont fixées dans les notebooks.
+
+*Note de parcours : le paclitaxel (cible : tubuline) avait été envisagé, puis écarté car trop flexible pour un calcul raisonnable sur Colab gratuit.*
 
 ## Licence
 
