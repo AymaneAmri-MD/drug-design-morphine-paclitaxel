@@ -1,0 +1,9 @@
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+.DS_Store
+results/*
+!results/.gitkeep
+data/raw_large/
+*.dcd
+*.xtc

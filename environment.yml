@@ -1,0 +1,14 @@
+name: drug-design
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - rdkit
+  - numpy
+  - pandas
+  - matplotlib
+  - jupyterlab
+  - biopython
+  - meeko
+  - vina
+  - pip
