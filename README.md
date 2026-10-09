@@ -42,8 +42,8 @@ jupyter lab
 ## Avancement
 
 - [x] 01 Préparation des ligands (RDKit)
-- [ ] 02 Docking (re-docking puis docking)
-- [ ] 03 Modèle génératif
+- [x] 02 Docking (re-docking puis docking)
+- [x] 03 Modèle génératif
 
 ## Limites
 
